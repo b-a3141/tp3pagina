@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "logo";
+  src: url("../recursos/logo.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: eslogan;
+  src: url("../recursos/eslogan.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: principal;
+  src: url("../recursos/principal.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: principal;
+}
+
+.navbarContainer {
+  position: fixed;
+  height: 80px;
+  width: 100vw;
+  background-color: #d1b77a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 0;
+  left: 0;
+}
+
+.navbarContainer > .logoContainer {
+  height: 80px;
+  line-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  min-width: 300px;
+}
+
+.navbarContainer > .logoContainer > * {
+  text-align: center;
+  text-decoration: none;
+  color: #0F00FF;
+  font-weight: 500;
+}
+
+.navbarContainer > .logoContainer > .logo {
+  padding-top: 10px;
+  font-family: logo;
+  font-size: 50px;
+}
+
+.navbarContainer > .logoContainer > .eslogan {
+  font-family: eslogan;
+  font-size: 35px;
+  margin-top: -9px;
+}
+
+.navbarContainer > .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  line-height: 40px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: 10px;
+}
+
+.navbarContainer > .navbar > a {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #0F00FF;
+  min-width: 50px;
+}
+
+.navbarContainer > .navbar > a:hover {
+  background: #e5d6b3;
+  border-radius: 10px;
+}
+
+.main {
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+.carousel-item > img {
+  height: 90vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-height: 769px) {
+  .carousel-item > img {
+    height: 82.7vh;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,142 @@
+$lightblue:#0F00FF;
+$darkblue:#09009B;
+$grayblue:#D7E9F7;
+$lightbrown:#FFA400;
+$darkbrown:#D98C00;
+$medievalbrown: #d1b77a;
+$cake:#F3F0D7;
+$white: #FBFBFB;
+$medievalred:#cb220c;
+
+//Variable slider
+$carousel-control-color:             $white;
+$carousel-control-width:             15%;
+$carousel-control-opacity:           .5;
+$carousel-control-hover-opacity:     .9;
+$carousel-control-transition:        opacity .15s ease;
+
+$carousel-indicator-width:           30px;
+$carousel-indicator-height:          3px;
+$carousel-indicator-hit-area-height: 10px;
+$carousel-indicator-spacer:          3px;
+$carousel-indicator-opacity:         .5;
+$carousel-indicator-active-bg:       $white;
+$carousel-indicator-active-opacity:  1;
+$carousel-indicator-transition:      opacity .6s ease;
+
+$carousel-caption-width:             70%;
+$carousel-caption-color:             $white;
+$carousel-caption-padding-y:         1.25rem;
+$carousel-caption-spacer:            1.25rem;
+
+$carousel-control-icon-width:        2rem;
+
+$carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+$carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+
+$carousel-transition-duration:       .6s;
+$carousel-transition:                transform $carousel-transition-duration ease-in-out; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
+
+
+
+$carousel-dark-control-icon-filter:  invert(1) grayscale(100);
+//--------------------------------------------------------------------------
+
+
+@font-face {
+    font-family: "logo";
+    src: url("../recursos/logo.ttf") format('truetype')
+    ;
+}
+
+@font-face {
+    font-family: eslogan;
+    src: url("../recursos/eslogan.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: principal;
+    src: url("../recursos/principal.otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: principal;
+    
+}
+
+.navbarContainer {
+    position: fixed;
+    height: 80px;
+    width: 100vw;
+    background-color: $medievalbrown;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+
+    & > .logoContainer {
+        height: 80px;
+        line-height: 40px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        min-width: 300px;
+        & > * {
+            text-align: center;
+            text-decoration: none;
+            color:$lightblue;
+            font-weight: 500;
+        }
+        & > .logo {
+            padding-top: 10px;
+            font-family: logo;
+            font-size: 50px;
+        }
+        & > .eslogan {
+            font-family: eslogan;
+            font-size: 35px;
+            margin-top: -9px;
+        }
+    }
+
+    & > .navbar {
+        display: flex;
+        height: 80px;
+        line-height: 40px;
+        flex-direction: row;
+        margin-right: 10px;
+        &>a{
+            padding: 5px 10px;
+            text-decoration: none;
+            color: $lightblue;
+            min-width: 50px;
+            &:hover{
+                background: lighten($color: $medievalbrown, $amount: 15%);
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+.main {
+    margin-top: 80px;
+    overflow: hidden;
+    
+}
+.carousel-item > img{
+    height: 90vh;
+    object-fit: cover;
+}
+
+@media (max-height:769px) {
+
+    .carousel-item > img{
+        height: 82.7vh;
+    }
+}
+
+//Clases auxiliares -----------------------------------------------------------------------------------
+//Switch-------
