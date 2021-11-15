@@ -14,8 +14,8 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
+  margin: 5;
+  padding: 5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: principal;
@@ -95,21 +95,7 @@
 }
 
 .main {
-  margin-top: 80px;
+  background: #e5d6b3;
+  margin-top: 100px;
   overflow: hidden;
 }
-
-.carousel-item > img {
-  height: 90vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-@media (max-height: 769px) {
-  .carousel-item > img {
-    height: 82.7vh;
-  }
-
-  
-}
-/*# sourceMappingURL=style.css.map */
