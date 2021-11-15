@@ -99,3 +99,25 @@
   margin-top: 100px;
   overflow: hidden;
 }
+
+#btnIngresar {    font-family: verdana, arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  padding: 4px;
+  background-color: #ffffcc;
+  color: #666666;
+  text-decoration: none;
+}
+#btnIngresar:link,
+#btnIngresar:visited {
+  border-top: 1px solid #cccccc;
+  border-bottom: 2px solid #666666;
+  border-left: 1px solid #cccccc;
+  border-right: 2px solid #666666;
+}
+#btnIngresar:hover {
+   border-bottom: 1px solid #cccccc;
+  border-top: 2px solid #666666;
+  border-right: 1px solid #cccccc;
+  border-left: 2px solid #666666;
+}
