@@ -96,7 +96,7 @@
 
 .main {
   margin-top: 80px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .carousel-item > img {
@@ -109,7 +109,15 @@
   .carousel-item > img {
     height: 82.7vh;
   }
+}
 
-  
+.espacioVertical {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.form-check{
+  margin-left: 25px;
+  padding: 2px;
 }
 /*# sourceMappingURL=style.css.map */
