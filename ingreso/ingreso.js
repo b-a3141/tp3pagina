@@ -3,8 +3,9 @@ let usuario = document.getElementById("inputNombreUsuario");
 
 
 function reconocerAdmin(){
+   let userName = usuario.value();
    
-   if (usuario === "a") {
+   if (userName.toLowerCase() === "admin") {
        return location.href = "../admin/updateUsuario.html";
    }
    else{
