@@ -34,6 +34,7 @@
           justify-content: space-between;
   top: 0;
   left: 0;
+  padding-bottom: 5px;
 }
 
 .navbarContainer > .logoContainer {
