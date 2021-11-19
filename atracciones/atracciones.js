@@ -11,3 +11,12 @@ function initMap() {
 },
   });
 }
+
+let marker = new google.maps.Marker({
+    position: {
+           lat: -34.6037345,
+           lng: -58.383
+    },
+    map: map,
+    title: 'Viaducto de Segovia'
+});
