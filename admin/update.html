@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!-- Nav CSS -->
     <link type="text/css" rel="stylesheet" href="../css/style.css" src="style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     
+     <!-- datatables -->
+     <link  rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/>
+     <script defer type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script defer type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
     crossorigin="anonymous"></script>
      <!-- Bootstrap CSS -->
@@ -17,76 +23,112 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
     crossorigin="anonymous">
     <title>Modificaciones del administrador</title>
-</head>
+
+    <script defer type="text/javascript">
+      window.addEventListener('DOMContentLoaded', function(){
+      $('.tablaDelAdmin').DataTable({ 
+        
+        "order" : [[ 0, "asc" ], [ 3, "desc" ]] });
+   
+      } ); 
+      var table = $('tablaDelAdmin').DataTable();
+      table.search().draw();
+      
+    </script>
+
+
+  </head>
+
+
 <body>
+  
   <div class="navbarContainer">
     <div class="logoContainer">
         <a href="" class="logo">Sin culpa</a>
         <a href="" class="eslogan">Porque viajar sin culpa es posible</a>
     </div>
     <div class="navbar">
-        <a href="../index.html" class="navbar-item">Inicio</a>
-        <a href="../ingreso/ingreso.html" class="navbar-item">Productos</a>
-        <a href="../ingreso/ingreso.html" class="navbar-item">Nosotros</a>
-        <a href="../ingreso/ingreso.html" class="navbar-item">Ingreso</a>
+        <a href="../index.html" class="navbar-item">Salir</a>
+  
     </div>
-</div>
+  </div>
 
    <div class="main"> 
 
 
-    
-    <div class="row"  style="padding-top: 30px; ">
-      
-      <div class="col" style="padding-left: 5px;">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Actualizaciones</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Pantalla general del administrador</h6>
-            <p class="card-text">Algunas modificaciones pueden demorar unos minutos en reflejarse por el tráfico hacia la base de datos.</p>
-            
-          </div>
-        </div>
-      </div>
-      
-      <div class="col">
-        <div class="btn-group" role="group">
-          <button id="btnUsuarioDrop" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Usuario
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="btnUsuarioDrop">
-            <li><a class="dropdown-item" href="#">Alta</a></li>
-            <li><a class="dropdown-item" href="#">Baja</a></li>
-            <li><a class="dropdown-item" href="#">Update tiempo</a></li>
-            <li><a class="dropdown-item" href="#">Update monedas</a></li>
-            <li><a class="dropdown-item" href="#">Update peferencia</a></li>
-          </ul>
-  
-          <button id="btnAtraccionDrop" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Atracciones
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="btnAtraccionDrop">
-            <li><a class="dropdown-item" href="../tiposDeAtraccion/tiposDeAtraccion.html">Alta / Baja</a></li>
-            <li><a class="dropdown-item" href="#">Update tiempo</a></li>
-            <li><a class="dropdown-item" href="#">Update monedas</a></li>
-            <li><a class="dropdown-item" href="#">Update cupo</a></li>
-          </ul>
-  
-          <button id="btnPromocionDrop" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Promociones
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="btnPromocionDrop">
-            <li><a class="dropdown-item" href="#">Alta / Baja</a></li>
-            <li><a class="dropdown-item" href="#">Update atracciones contenidas</a></li>
-          </ul>
-  
-        </div>
-      </div>
-      
-    
-    </div> 
+    <div class="container my-3" style="width:80%">
+     <div class="table-responsive">
+      <table  class="tablaDelAdmin table table-bordered table-striped" class="diplay" style="width:100%"   >
 
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>Tipo de Atracción</th>
+              <th>Monedas</th>
+              <th>Tiempo</th>
+          </tr>
+          <tr>
+            <td>arebalo</td>
+            <td>Degustación</td>
+            <td>60</td>
+            <td>3.5</td>
+          </tr>
+          <tr>
+            <td>renata</td>
+            <td>Aventura</td>
+            <td>50</td>
+            <td>0.5</td>
+          </tr>
+          <tr>
+            <td>julián</td>
+            <td>Degustación</td>
+            <td>10</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>sofía</td>
+            <td>Paisaje</td>
+            <td>30</td>
+            <td>3</td>
+          </tr>
+          
+        <tr>
+          <td>Diego</td>
+          <td>Degustación</td>
+          <td>20</td>
+          <td>3.5</td>
+        </tr>
+        <tr>
+          <td>Natalia</td>
+          <td>Aventura</td>
+          <td>12</td>
+          <td>1.5</td>
+        </tr>
+        <tr>
+          <td>Tomás</td>
+          <td>Degustación</td>
+          <td>100</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Lucía</td>
+          <td>Paisaje</td>
+          <td>28</td>
+          <td>16</td>
+        </tr>
+        </thead>
+
+      </table>
+      
+      </div>
+
+      <button type="button"  id="btnDescartar" class="btn btn-secondary">Descartar</button>
+      <button type="button" id="btnGuardar"  class="btn btn-success">Guardar cambios</button>
+    </div>
+    
 
   </div>
+
+
 </body>
 </html>
