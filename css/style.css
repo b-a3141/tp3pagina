@@ -15,7 +15,7 @@
 
 * {
   margin: 0;
-  padding: 0;
+  padding: 5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: principal;
@@ -38,6 +38,7 @@
 }
 
 .navbarContainer > .logoContainer {
+  
   height: 80px;
   line-height: 40px;
   display: -webkit-box;
