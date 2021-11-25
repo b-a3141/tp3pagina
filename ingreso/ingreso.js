@@ -12,14 +12,3 @@ function reconocerAdmin(){
   }
    
 }
-
-//todavía no funciona presionando enter
-//usuario.addEventListener('keydown', (event) => {
-//    if(event.code==="Enter"){ 
- //      reconocerAdmin();
-//    } 
-//});
-
-
-
-// nombre.isAdmin()
